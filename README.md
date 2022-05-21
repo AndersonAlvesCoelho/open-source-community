@@ -36,5 +36,5 @@ Uma plataforma para divulgação de projetos Open Source.
 - [ ] Login de usuário;
 - [ ] Registro de projetos
 
----
+------
 
