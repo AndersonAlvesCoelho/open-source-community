@@ -31,7 +31,7 @@ Uma plataforma para divulgação de projetos Open Source.
 
 ## 📚 Demandas para primeira versão
 
-- [ ] Tela de home para visualização do site  com alguns projetos;
+- [ ] Tela de home para visualização do site com alguns projetos;
 - [ ] Cadastro de usuários;
 - [ ] Login de usuário;
 - [ ] Registro de projetos
