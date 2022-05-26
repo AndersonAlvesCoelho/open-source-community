@@ -4,10 +4,10 @@ type Pokemon = {
     name: string
   }
 
-interface GetNamePokemonProps {
+interface PokemonProps {
     type: PokemonConstants,
-    payload?: Pokemon[]
+    payload: Pokemon[]
 }
 
 
-export type PokemonType = GetNamePokemonProps;
+export type PokemonType = PokemonProps;

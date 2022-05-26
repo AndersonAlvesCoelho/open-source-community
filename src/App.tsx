@@ -16,16 +16,12 @@ function App() {
     getNamePokemon();
   }, []);
 
-  console.log("pokemon ", pokemon)
-
   return (
     <>
       {loading ? <h1>Carregando...</h1> : 
-        pokemon && pokemon.map((poke, key) => {
-          <h1 key={key}>{poke.name}</h1>
+        pokemon?.map((poke, key) => {
+          return <h1 key={key} className="text-zinc-100">{ poke.name}</h1>
         })}
-
-
     </>
   );
 }
