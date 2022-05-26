@@ -1,17 +1,17 @@
-import { ActionType } from "../../constants/index"
+import { ActionType } from "../../constants/index";
 
 interface DepositAction {
-    type: ActionType.DEPOSIT,
-    payload: number
+  type: ActionType.DEPOSIT;
+  payload: number;
 }
 
 interface WithdrawAction {
-    type: ActionType.WITHDRAW,
-    payload: number
+  type: ActionType.WITHDRAW;
+  payload: number;
 }
 
 interface BankruptAction {
-    type: ActionType.BANKRUPT
+  type: ActionType.BANKRUPT;
 }
 
 export type Action = DepositAction | WithdrawAction | BankruptAction;

@@ -6,7 +6,6 @@
 <code><img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/terminal/terminal.png"></code>
 <code><img height="20" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/1024px-Visual_Studio_Code_1.35_icon.svg.png"></code>
 
-
 <h1 align="center">Open Source Community</h1>
 
 ## 💡 Sobre o Projeto
@@ -24,7 +23,7 @@ Uma plataforma para divulgação de projetos Open Source.
     #instale as dependências necessárias com:
     npm i
     #agora start o projeto
-    npm run dev 
+    npm run dev
 ```
 
 ---
@@ -36,5 +35,4 @@ Uma plataforma para divulgação de projetos Open Source.
 - [ ] Login de usuário;
 - [ ] Registro de projetos
 
-------
-
+---

@@ -1,8 +1,8 @@
 # Changelog
 
 ## 0.0.0
-  - (doc) Log das features
 
+- (doc) Log das features
 
 ## Especificações tecnicas
 

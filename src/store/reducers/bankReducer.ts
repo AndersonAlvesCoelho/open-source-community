@@ -17,7 +17,6 @@ export default function bankReducer(
   state: InitialState = initialState,
   action: Action
 ): InitialState {
-
   switch (action.type) {
     case ActionType.DEPOSIT:
       return { ...state, loading: true, count: state.count + action.payload };

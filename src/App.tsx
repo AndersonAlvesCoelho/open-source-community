@@ -18,10 +18,17 @@ function App() {
 
   return (
     <>
-      {loading ? <h1>Carregando...</h1> : 
+      {loading ? (
+        <h1>Carregando...</h1>
+      ) : (
         pokemon?.map((poke, key) => {
-          return <h1 key={key} className="text-zinc-100">{ poke.name}</h1>
-        })}
+          return (
+            <h1 key={key} className="text-zinc-100">
+              {poke.name}
+            </h1>
+          );
+        })
+      )}
     </>
   );
 }
