@@ -1,45 +1,29 @@
-import { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { bindActionCreators } from "redux";
+import { pokemonAction } from "./store/action";
+import { ReducersState } from "./store/reducers";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const { loading, pokemon } = useSelector(
+    (state: ReducersState) => state.pokemon
+  );
+  const dispatch = useDispatch();
+
+  const { getNamePokemon } = bindActionCreators(pokemonAction, dispatch);
+
+  useEffect(() => {
+    getNamePokemon();
+  }, []);
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.tsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
-    </div>
-  )
+    <>
+      {loading ? <h1>Carregando...</h1> : 
+        pokemon?.map((poke, key) => {
+          return <h1 key={key} className="text-zinc-100">{ poke.name}</h1>
+        })}
+    </>
+  );
 }
 
-export default App
+export default App;
