@@ -1,14 +1,9 @@
+export const RoutesPath = {
+  Signin: { path: "/" },
 
-export const Routes = {
+  // PAGES
+  StyleGuide: { path: "/style-guide" },
 
-    Signin: { path: "/" },
-
-    // PAGES
-    Dashboard: { path: "/dashboard" },
-    RegisterUsers: { path: "/admin/register-users" },
-    FroniusSelfConsumption: { path: "/fronius-self-consumption" },
-
-    // CONTROLLER
-    NotFound: { path: "/404" },
-
+  // CONTROLLER
+  NotFound: { path: "/404" },
 };

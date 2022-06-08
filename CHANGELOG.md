@@ -1,6 +1,9 @@
 # Changelog
 
+## 0.0.1
+  - Implementação
 ## 0.0.0
+  - Configuração do projeto com vite
   - (doc) Log das features
 
 
