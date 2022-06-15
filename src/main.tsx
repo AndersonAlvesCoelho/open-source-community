@@ -8,8 +8,6 @@ import { store } from "./store/store";
 import App from "./pages/App";
 
 import "./global.css";
-import { NavBar } from "./components/Navbars";
-import SideBar from "./components/SideBar";
 
 const container = document.getElementById("root")!;
 const root = createRoot(container);
@@ -18,11 +16,7 @@ root.render(
   <React.StrictMode>
     <Provider store={store}>
       <BrowserRouter>
-        <NavBar />
-        <div className="pt-12 lg:flex">
-          <SideBar />
-          <App />
-        </div>
+        <App />
       </BrowserRouter>
     </Provider>
   </React.StrictMode>
