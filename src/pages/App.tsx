@@ -1,29 +1,19 @@
 import { Route, Routes } from "react-router-dom";
-import { RoutesPath } from "../routes";
-
-// PAGES
-import StyleGuide from "./StyleGuide";
-import Cards from "./Cards";
-
-// const RouteWithoutTemplate = ({ component: Component, ...rest }) => {
-//   return (
-//     <Route
-//       {...rest}
-//       render={(props) => (
-//         <>
-//           <Component {...props} />
-//         </>
-//       )}
-//     />
-//   );
-// };
+import { RoutesComponents, RoutesPages } from "../routes";
 
 export default () => (
   <Routes>
-    <Route path="/" element={<h1>Hello Word</h1>} />
-    <Route path="/style-guide/cards" element={<Cards />} />
-    <Route path="/style-guide" element={<StyleGuide />} />
-    
+    <Route
+      path={RoutesPages.StyleGuide.path}
+      element={RoutesPages.StyleGuide.layouts}
+    >
+      <Route index element={RoutesPages.StyleGuide.component} />
+      <Route
+        path={RoutesComponents.Blogs.path}
+        element={RoutesComponents.Blogs.component}
+      />
+    </Route>
+
     {/* <Redirect to={Routes.NotFound.path} /> */}
   </Routes>
 );
