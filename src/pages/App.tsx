@@ -1,8 +1,9 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 import { RoutesComponents, RoutesPages } from "../routes";
 
 export default () => (
   <Routes>
+    <Route path="/" element={<Navigate replace to={RoutesPages.StyleGuide.path} />} />
     <Route
       path={RoutesPages.StyleGuide.path}
       element={RoutesPages.StyleGuide.layouts}
@@ -14,6 +15,5 @@ export default () => (
       />
     </Route>
 
-    {/* <Redirect to={Routes.NotFound.path} /> */}
   </Routes>
 );
