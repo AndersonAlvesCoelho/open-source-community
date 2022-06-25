@@ -1,7 +1,8 @@
-import { Cards as CardsIcon } from "phosphor-react";
+import { Cards, TextAa } from "phosphor-react";
 import LayoutStyleGuide from "./pages/layouts/LayoutStyleGuide";
 import StyleGuide from "./pages/styleGuide";
 import Blogs from "./pages/styleGuide/Blogs";
+import Typography from "./pages/styleGuide/Typography";
 
 // PAGES
 export const RoutesPages = {
@@ -12,14 +13,18 @@ export const RoutesPages = {
     component: <StyleGuide />,
     layouts: <LayoutStyleGuide />
   },
-};
-
-// COMPONENTES
-export const RoutesComponents = {
   Blogs: {
     name: "Blogs",
     path: "blogs",
-    icon: <CardsIcon />,
+    icon: <Cards />,
     component: <Blogs />,
   },
+  Typography: {
+    name: "Typography",
+    path: "typographys",
+    icon: <TextAa />,
+    component: <Typography />,
+  },
 };
+
+

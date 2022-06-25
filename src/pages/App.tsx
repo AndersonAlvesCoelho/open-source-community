@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import { RoutesComponents, RoutesPages } from "../routes";
+import {  RoutesPages } from "../routes";
 
 export default () => (
   <Routes>
@@ -9,8 +9,12 @@ export default () => (
     >
       <Route index element={RoutesPages.StyleGuide.component} />
       <Route
-        path={RoutesComponents.Blogs.path}
-        element={RoutesComponents.Blogs.component}
+        path={RoutesPages.Typography.path}
+        element={RoutesPages.Typography.component}
+      />
+      <Route
+        path={RoutesPages.Blogs.path}
+        element={RoutesPages.Blogs.component}
       />
     </Route>
 
